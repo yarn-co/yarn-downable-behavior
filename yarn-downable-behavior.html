@@ -8,7 +8,9 @@ var YarnBehaviors = YarnBehaviors || {};
   /**
   This behavior adds sugar to composition by binding parent properties down to a single child element.  On the parent, simply set `downable` to an object whose keys are parent properties and whose values are child properties.  When a parent property changes, it will set the mapped child property accordingly.
 
-  The parent should have exactly one child element.  This can be used to great effect with yarn-endpoints-behavior.
+  The parent should have exactly one child element in its light DOM.  The parent component must distribute its light DOM child element into its local DOM using `<content></content>`.
+
+  This can be used to great effect with yarn-endpoints-behavior.
   ```
   <!--
   If <my-sdk> has the endpoints behavior
@@ -34,7 +36,7 @@ var YarnBehaviors = YarnBehaviors || {};
        * The mapping of parent component to child component properties.
        *
        * Keys are parent property names with `notify` enabled.
-       * 
+       *
        * Values are child property names that are not `readOnly`.
        *
        */
