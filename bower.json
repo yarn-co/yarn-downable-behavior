@@ -16,6 +16,7 @@
     "type": "git",
     "url": "git://github.com/yarn-co/yarn-downable-behavior.git"
   },
+  "main": "yarn-downable-behavior.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0"
   },
